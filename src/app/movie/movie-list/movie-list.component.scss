@@ -1,0 +1,22 @@
+h2 {
+  text-align: center;
+  color: darkslategray;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+  li {
+    margin: 0 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+    .details {
+      background-color:darkcyan;
+      display: flex;
+      flex-flow: column;
+    }
+  }
+}

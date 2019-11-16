@@ -1,1 +1,11 @@
-<p>movie-list works!</p>
+<h2>Movies List</h2>
+<ul *ngIf="movies$ | async as movies">
+  <li *ngFor="let movie of movies">
+    <img [src]="movie.image" />
+    <div class="details">
+      <span>{{ movie.name }}</span>
+      <span>{{ movie.genre }}</span>
+      <span>{{ movie.releaseYear }}</span>
+    </div>
+  </li>
+</ul>
