@@ -1,7 +1,9 @@
 <h2>Movies List</h2>
 <ul *ngIf="movies$ | async as movies">
   <li *ngFor="let movie of movies">
-    <img [src]="movie.image" />
+    <a [routerLink]="movie.id">
+        <img [src]="movie.image" />
+    </a>
     <div class="details">
       <span>{{ movie.name }}</span>
       <span>{{ movie.genre }}</span>
