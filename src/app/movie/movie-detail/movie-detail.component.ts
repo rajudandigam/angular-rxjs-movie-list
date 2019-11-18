@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MovieService } from '../serices/movie.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -9,7 +9,7 @@ import { Movie } from '../models/movie.model';
   templateUrl: './movie-detail.component.html',
   styleUrls: ['./movie-detail.component.scss']
 })
-export class MovieDetailComponent implements OnInit {
+export class MovieDetailComponent implements OnInit, OnDestroy {
 
   id: number;
   movie: Movie;
@@ -28,5 +28,7 @@ export class MovieDetailComponent implements OnInit {
       });
   }
 
-
+  ngOnDestroy(): void {
+    this.movieSub$.unsubscribe();
+  }
 }
