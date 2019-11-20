@@ -1,6 +1,27 @@
 nav {
   background-color: darkcyan;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    border: 0px;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    background-color: darkslateblue;
+    border-radius: 10px;
+    font-size: 16px;
+
+    &:hover {
+      color: lightblue;
+      background-color: #372d75;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px darkslateblue;
+    }
+  }
 }
 
 h1 {
