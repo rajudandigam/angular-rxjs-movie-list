@@ -30,4 +30,8 @@ export class MovieService {
       movies.find(movie => +movie.id === +id)
     );
   }
+
+  addMovie(movie: Movie) {
+    return this.http.post(this.ROOT_URL, movie);
+  }
 }
