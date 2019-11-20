@@ -10,12 +10,12 @@ const routes: Routes = [
     component: MovieListComponent
   },
   {
-    path: ':id',
-    component: MovieDetailComponent
-  },
-  {
     path: 'add',
     component: AddMovieComponent 
+  },
+  {
+    path: ':id',
+    component: MovieDetailComponent
   }
 ];
 
