@@ -32,8 +32,10 @@ export class AddMovieComponent implements OnInit {
     if(this.movieForm.valid) {
       this.movieService.addMovie(this.movieForm.value)
         .subscribe( res => {
-          this.movieForm.reset();
-          this.router.navigate(['/']);
+          if(res) {
+            this.movieForm.reset();
+            this.router.navigate(['/']);
+          }
         })
     }
   }

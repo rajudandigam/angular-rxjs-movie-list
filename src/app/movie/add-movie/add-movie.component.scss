@@ -26,5 +26,11 @@ form {
     color: white;
     font-size: 18px;
     font-weight: bold;
+
+    &[disabled] {
+      background-color: grey;
+      color: black;
+      border: 5px solid darkgray; 
+    }
   }
 }
